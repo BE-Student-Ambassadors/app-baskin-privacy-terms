@@ -1,0 +1,256 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f1f1ef;
+  --ink: #000000;
+  --ink-800: #3c3f42;
+  --mute: #75787b;
+  --accent: #003c6c;
+  --accent-600: #002d51;
+  --gold: #f29813;
+  --divider: #d0d0ce;
+  --max-width: 720px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink-800);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+.site-header {
+  border-bottom: 2px solid var(--accent);
+  padding: 14px 20px;
+}
+
+.site-header .inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--accent);
+}
+
+.site-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 18px;
+}
+
+.site-nav a {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mute);
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current='page'] {
+  color: var(--accent);
+  border-bottom: 2px solid var(--gold);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin: 0 0 10px;
+}
+
+h1.page-title {
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.updated {
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin: 0 0 20px;
+}
+
+.intro {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-800);
+  margin: 0 0 8px;
+}
+
+section.policy-section {
+  margin-top: 28px;
+}
+
+section.policy-section h2 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+section.policy-section p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-800);
+  margin: 0;
+}
+
+.page-footer-note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--mute);
+  margin-top: 36px;
+  border-top: 1px solid var(--divider);
+  padding-top: 18px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--divider);
+  padding: 20px;
+}
+
+.site-footer .inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  font-size: 12px;
+  color: var(--mute);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.site-footer a {
+  color: var(--mute);
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
+
+/* Home / index page */
+.hero {
+  padding: 56px 0 8px;
+}
+
+.hero .mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.hero p {
+  font-size: 15px;
+  color: var(--ink-800);
+  max-width: 52ch;
+}
+
+.link-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+@media (max-width: 480px) {
+  .link-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.link-card {
+  display: block;
+  border: 1px solid var(--divider);
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  background: var(--surface);
+  transition: border-color 0.15s ease;
+}
+
+.link-card:hover {
+  border-color: var(--accent);
+}
+
+.link-card .kind {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.link-card h2 {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.link-card p {
+  font-size: 13px;
+  color: var(--mute);
+  margin: 0;
+}
